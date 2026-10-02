@@ -1,0 +1,3 @@
+CMD                             |    Bytecode               | Port
+START_STREAM                    |   0xef000400              | 8800
+Lifebit                         |   0xef000400              | 8801

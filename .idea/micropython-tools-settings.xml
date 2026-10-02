@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MicroPythonTools">
+    <option name="activeWebReplPresetId" value="55cd12ca-b028-4e7c-888e-8ed79600820b" />
+    <option name="webReplPresets">
+      <map>
+        <entry key="55cd12ca-b028-4e7c-888e-8ed79600820b" value="{&quot;id&quot;:&quot;55cd12ca-b028-4e7c-888e-8ed79600820b&quot;,&quot;name&quot;:&quot;Default&quot;}" />
+      </map>
+    </option>
+    <option name="webReplPresetsMigrated" value="true" />
+  </component>
+</project>

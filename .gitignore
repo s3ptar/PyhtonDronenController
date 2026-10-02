@@ -1,0 +1,12 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+#configs
+override_config.json
+#folder
+log/
+Log/
+LOG/
