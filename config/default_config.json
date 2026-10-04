@@ -1,6 +1,6 @@
 {
     "Logging": {
-        "loglevel_file": "INFO",
+        "loglevel_file": "DEBUG",
         "loglevel_console": "DEBUG",
         "filepath": "log/app.log",
         "backup_count": 2,

@@ -21,7 +21,7 @@
 """#####################################################################
 # Includes
 #####################################################################"""
-import time
+import utilities
 import logging
 """#####################################################################
 # Informations
@@ -38,7 +38,8 @@ import logging
 """#####################################################################
 # Global Variable
 #####################################################################"""
-
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.ERROR)
 """#####################################################################
 # local Variable
 #####################################################################"""
@@ -63,13 +64,13 @@ async def main():
     # Automatische Aktivierung nach Bootup
     # await asyncio.sleep(20)
 
-    await asyncio.gather(
+    """await asyncio.gather(
         # task_hid.evdev_loop(),
         # web_server.start(),
         #read_cdc_uart()
         esp_now_master_server()
         #asyncio.sleep(30)
-    )
+    )"""
 
 """#####################################################################
 #! @fn           update_peer(old_mac_bytes, new_mac_bytes)
@@ -97,27 +98,9 @@ async def main():
 #  @ return      none
 #####################################################################"""
 if __name__ == "__main__":
-    print("Starting LED ClockRing Application")
-
-    sta = network.WLAN(network.STA_IF)
-    sta.active(True)
-    sta.disconnect()
-
-    e = espnow.ESPNow()
-    e.active(True)
-
-    # Native USB exklusiv nutzen
-    usb.device.get().init(cdc, builtin_driver=False)
-
-    utilities.get_device_telemetry()
-
-    if gc.isenabled():
-        logger.info(f"Garbage Collector disable, is now enabled.")
-        gc.enable()
-        gc.collect()
-    else:
-        logger.info(f"Garbage Collector enable")
-
+    print(f"Starting {__name__} Application")
+    logger = utilities.setup_logger()
+    logger.info("Logger erfolgreich eingerichtet.")
     logger.info("Main loop")
 
 
